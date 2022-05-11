@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".fragments.WebRTCFragment">
+
+    <TextView
+        android:id="@+id/tvResultRemoteCandidates"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvRemoteCandidates"
+        app:layout_constraintStart_toEndOf="@+id/tvRemoteCandidates"
+        app:layout_constraintTop_toTopOf="@+id/tvRemoteCandidates" />
+
+    <ImageView
+        android:id="@+id/ivRemoteSDP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:src="@android:drawable/ic_delete"
+        app:layout_constraintBottom_toBottomOf="@+id/tvRemoteSDP"
+        app:layout_constraintStart_toEndOf="@+id/tvRemoteSDP"
+        app:layout_constraintTop_toTopOf="@+id/tvRemoteSDP" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="WebRTC Demo"
+        android:textColor="@color/white"
+        android:textSize="26dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvSignalingStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:text="Signaling status:"
+        android:textSize="16dp"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+    <TextView
+        android:id="@+id/tvConnect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Not connected"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvSignalingStatus"
+        app:layout_constraintStart_toEndOf="@+id/tvSignalingStatus"
+        app:layout_constraintTop_toTopOf="@+id/tvSignalingStatus" />
+
+    <TextView
+        android:id="@+id/tvResultLocalCandidates"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvLocalCandidates"
+        app:layout_constraintStart_toEndOf="@+id/tvLocalCandidates"
+        app:layout_constraintTop_toTopOf="@+id/tvLocalCandidates" />
+
+    <TextView
+        android:id="@+id/tvLocalSDP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Local SDP:"
+        android:textSize="16dp"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@+id/tvSignalingStatus"
+        app:layout_constraintTop_toBottomOf="@+id/tvSignalingStatus" />
+
+    <TextView
+        android:id="@+id/tvLocalCandidates"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Local Candidates:"
+        android:textSize="16dp"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@+id/tvLocalSDP"
+        app:layout_constraintTop_toBottomOf="@+id/tvLocalSDP" />
+
+    <TextView
+        android:id="@+id/tvRemoteSDP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Remote SDP:"
+        android:textSize="16dp"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@+id/tvLocalCandidates"
+        app:layout_constraintTop_toBottomOf="@+id/tvLocalCandidates" />
+
+    <TextView
+        android:id="@+id/tvRemoteCandidates"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Remote Candidates:"
+        android:textSize="16dp"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@+id/tvRemoteSDP"
+        app:layout_constraintTop_toBottomOf="@+id/tvRemoteSDP" />
+
+    <ImageView
+        android:id="@+id/ivSDP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:src="@android:drawable/ic_delete"
+        app:layout_constraintBottom_toBottomOf="@+id/tvLocalSDP"
+        app:layout_constraintStart_toEndOf="@+id/tvLocalSDP"
+        app:layout_constraintTop_toTopOf="@+id/tvLocalSDP" />
+
+    <TextView
+        android:id="@+id/tvWebRTC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="WebRTC Status"
+        android:textSize="16dp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="345dp" />
+
+    <TextView
+        android:id="@+id/tvWebRTCStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="New"
+        android:textStyle="bold"
+        android:textSize="14dp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/tvWebRTC"
+        app:layout_constraintStart_toStartOf="@+id/tvWebRTC"
+        app:layout_constraintTop_toBottomOf="@+id/tvWebRTC" />
+
+    <Button
+        android:id="@+id/buttonGet"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="Get ice servers"
+        app:layout_constraintBottom_toTopOf="@+id/buttonSend"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonSend"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="32dp"
+        android:text="Send Offer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
